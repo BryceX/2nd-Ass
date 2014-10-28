@@ -155,18 +155,10 @@ bool BulletActive = true;
 
 					for (int i = 0; i < 4; ++i)
 					{
-						Bullet* dagger = new Bullet;
-						dagger[i].bulletSprite = ("./images/dagger.png", dagger[i].bulletWidth, dagger[i].bulletHeight, true);
-						dagger[i].bulletX = playerX;
-						dagger[i].bulletY = playerY + (playerHeight*.5);
-						dagger[i].bulletY += (screenHeight*.2) * GetDeltaTime();
-						dagger[i].bulletUpperBoundary = dagger[i].bulletY + dagger[i].bulletHeight*.5;
-						dagger[i].bulletLowerBoundary = dagger[i].bulletY - dagger[i].bulletHeight*.5;
-						dagger[i].bulletRightBoundary = dagger[i].bulletX + dagger[i].bulletWidth*.5;
-						dagger[i].bulletLeftBoundary = dagger[i].bulletX - dagger[i].bulletWidth*.5;
-						timeWhenShot = gameTime;
+						Bullet*	dagger = new Bullet;
 						BulletVector.push_back(dagger);
 					}
+
 				}
 			}
 		}
